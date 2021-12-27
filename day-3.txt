@@ -1,0 +1,90 @@
+QUESTION:   1.For the given JSON iterate over all for loops (for, for in, for of, forEach)
+
+CODE:
+const user = {
+  name: "Arun",
+  age: 24,
+  adress: "Kadapa",
+};
+
+//for of loop
+console.log("for of loop");
+for (const value of Object.entries(user)) {
+  console.log(`${value[0]}=>${value[1]}`);
+}
+
+//for in loop
+console.log("for in loop");
+for (const value in user) {
+  console.log(`${value}=>${user[value]}`);
+}
+
+//for loop
+console.log("for loop");
+
+for (i = 0; i < Object.keys(user).length; i++) {
+  console.log(`${Object.keys(user)}=>${Object.values(user)}`);
+}
+
+//forEach loop
+console.log("for each loop");
+Object.entries(user).forEach((element) => {
+  console.log(` ${element}`);
+});
+
+
+
+OUTPUT:
+for of loop
+name=>Arun
+age=>24   
+adress=>Kadapa
+for in loop
+name=>Arun
+age=>24
+adress=>Kadapa
+for loop
+name,age,adress=>Arun,24,Kadapa
+name,age,adress=>Arun,24,Kadapa
+name,age,adress=>Arun,24,Kadapa
+for each loop
+ name,Arun
+ age,24
+ adress,Kadapa
+
+
+
+QUESTION:  2.Create your own resume data in JSON format
+
+CODE:
+const myResume = {
+  firstName: "Chintakunta",
+  lastName: "Arun Kumar Reddy",
+  qualification: "B.tech Mechanical Engg.",
+  mailId: "example@gmail.com",
+  adress: {
+    city: "Kadapa",
+    state: "Andhra Pradesh",
+    country: "India",
+  }
+};
+console.log(myResume);
+
+
+OUTPUT:
+{
+  firstName: 'Chintakunta',
+  lastName: 'Arun Kumar Reddy',
+  qualification: 'B.tech Mechanical Engg.',
+  mailId: 'example@gmail.com',
+  adress: { city: 'Kadapa', state: 'Andhra Pradesh', country: 'India' }
+}
+
+
+
+QUESTION:  3.Read about the difference between window, screen and document in javascript
+
+DESCRIPTION:
+WINDOW:Window is the global object,it contains everything, we can call window.screen,window.document to get those elements
+SCREEN:It is information about physical screen dimensions.
+DOCUMENT:It is the place where DOM is present
